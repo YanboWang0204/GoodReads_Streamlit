@@ -406,7 +406,7 @@ else:
     if 'button' not in st.session_state:
         st.session_state.button = False
 
-    if model == 'Content-based':
+    if model == 'Based on your previous reading list and ratings':
         new_user_profile = build_users_profiles(new_user_df)
 
         content_based_recommender_model = ContentBasedRecommender(books_df)
@@ -427,7 +427,7 @@ else:
             # st.session_state.button = True
             display_bar()
 
-    if model == 'Collaborative-Filtering':
+    if model == 'Based on readers with similar reading tastes':
         # Collaborative filtering
 
         total_interactions_df = pd.concat([interactions_df[['Uid', 'UserID', 'Review_Rating']], new_user_df], axis=0)
@@ -452,7 +452,7 @@ else:
             # st.session_state.button = True
             display_bar()
 
-    if model == 'Hybrid':
+    if model == 'Based on the above two perspectives':
         # Hybrid models
         new_user_profile = build_users_profiles(new_user_df)
         content_based_recommender_model = ContentBasedRecommender(books_df)
