@@ -398,8 +398,8 @@ else:
                                 "Review_Rating": new_user_rating})
 
     model = st.radio(
-        "Choose one recommendation engine for you:",
-        ('Content-based', 'Collaborative-Filtering', 'Hybrid')
+        "Please select a recommendation approach for you:",
+        ('Based on your previous reading list and ratings', 'Based on readers with similar reading tastes', 'Based on the above two perspectives')
     )
 
     button = st.button("Run")
