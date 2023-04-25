@@ -435,16 +435,16 @@ with subtab_genre:
 
     c1, c2, c3, c4 = st.columns(4)
     with c1:
-        st.metric(label="Added", value=df_stats.iloc[0, 1])
+        st.metric(label="Times Added to Shelves", value=df_stats.iloc[0, 1])
 
     with c2:
-        st.metric(label="Ratings", value=df_stats.iloc[0, 2])
+        st.metric(label="Number of Ratings", value=df_stats.iloc[0, 2])
 
     with c3:
-        st.metric(label="Reviews", value=df_stats.iloc[0, 3])
+        st.metric(label="Number of Reviews", value=df_stats.iloc[0, 3])
 
     with c4:
-        st.metric(label="To-read", value=df_stats.iloc[0, 4])
+        st.metric(label="Times marked as To-read", value=df_stats.iloc[0, 4])
 
     df_stats_day = df_stats.iloc[1:, :]
 
@@ -454,10 +454,10 @@ with subtab_genre:
         p1.add_trace(go.Scatter(x=df_stats_day['date'].values,
                                 y=df_stats_day['added'].values,
                                 mode='lines+markers',
-                                name='Added',
+                                name='Added to shelves',
                                 line=dict(color='firebrick', width=2)))
         p1.update_layout(width=550, height=400,
-                         title_text='Added', title_x=0.4)
+                         title_text='Added to shelves', title_x=0.4)
         st.plotly_chart(p1)
 
     with c2:
@@ -488,7 +488,7 @@ with subtab_genre:
         p4.add_trace(go.Scatter(x=df_stats_day['date'].values,
                                 y=df_stats_day['to-read'].values,
                                 mode='lines+markers',
-                                name='to-read',
+                                name='To-read',
                                 line=dict(color='green', width=2)))
         p4.update_layout(width=550, height=400,
                          title_text='To-read', title_x=0.4)
