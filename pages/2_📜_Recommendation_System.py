@@ -309,7 +309,8 @@ genre_selected = st.multiselect(
                         ['fiction', 'art']
 )
 
-df_select = df_info[df_info['Genre'].isin(genre_selected)]
+df_select_uid = df_info[df_info['Genre'].isin(genre_selected)]['Uid']
+df_select = books_df[books_df['Uid'].isin(df_select_uid)]
 
 book_selected = st.multiselect(
         "Please select the books that you have read and provide a rating for each book on a scale of 1 (worst) to 5 (best) to indicate your satisfaction level",
