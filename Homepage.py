@@ -9,12 +9,12 @@ st.set_page_config(
 st.title("📚 *GoodReads*: Book Analytics & Recommendation System")
 st.markdown(
     """
-    - @Yanbo Wang (yanbo.wang@berkeley.edu)
+    - @Yanbo Wang (yanbo.wang@berkeley.edu, UC Berkeley IEOR)
     - @GitHub: [GoodReads-Recommendation-System](https://github.com/YanboWang0204/GoodReads-Recommendation-System)
     ---
     
     This webpage app is built specifically for demonstrating our group project about
-    building an intelligent book recommendation system based on data from *GoodReads.com*, the world largest books and reviews websites under Amazon.
+    building an intelligent book recommendation system based on data from *GoodReads.com*, the world largest books and reviews website under Amazon.
     
     👈 **You can switch different pages on left-hand sidebar to play with different functions**
     """
