@@ -79,7 +79,7 @@ st.markdown(
 st.markdown(
     """
     ---
-    Version 1.0, copyright by Yanbo Wang (IEOR, UC Berkeley)
+    Version 1.1, copyright by Yanbo Wang (UC Berkeley, IEOR)
     """
 )
 
